@@ -14,3 +14,13 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# Latex output
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
+
