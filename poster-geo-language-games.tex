@@ -23,14 +23,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{figures/}}
 
-\title{\huge Geo-Language Games: Modelling the Role of Terrain in Language Diversity}
+\title{\huge Geo-Language Games: An Agent-Based Model of the Role of Terrain in Language Diversity}
 \author{Rachel Hendery, Liam Magee}
 \institute[University of Western Sydney]{Digital Humanities Research Group, University of Western Sydney, Parramatta, Australia}
 \date[Jun. 29, 2015]{Jun. 29, 2015}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength{\columnheight}
-\setlength{\columnheight}{75cm}
+\setlength{\columnheight}{60cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,49 +70,6 @@
                 \item
               \end{itemize}
             \end{block}
-            \vfill
-            \begin{block}{Feature Extraction}
-              \begin{columns}
-                \begin{column}{.55\textwidth}
-                  \begin{itemize}
-                  \item Interest point based feature extraction
-                    \begin{itemize}
-                    \item SIFT or SURF interest point detector
-                    \item leads to a \alert{very sparse} description
-                    \end{itemize}
-                  \item Grid-based feature extraction
-                    \begin{itemize}
-                    \item overlaid regular grid
-                    \item leads to a \alert{dense} description
-                    \end{itemize}
-                  \end{itemize}
-                \end{column}
-                \begin{column}{.44\textwidth}
-                  \centering
-                  \begin{tabularx}{\linewidth}{ZZZ}
-                     Orig.
-                     &
-                     IP
-                     &
-                     Grid
-                     \\
-                    \includegraphics[width=0.95\linewidth]{images/viola/m-012-1.png}
-                    &
-                    \includegraphics[width=0.95\linewidth]{images/viola/surf-64x64-ip/m-012-1.pngsurf.png}
-                    &
-                    \includegraphics[width=0.95\linewidth]{images/viola/surf-64x64-4/m-012-1.pngsurf.png}
-                    \\
-                    \includegraphics[width=0.95\linewidth]{images/viola/m-012-2.png}
-                    &
-                    \includegraphics[width=0.95\linewidth]{images/viola/surf-64x64-ip/m-012-2.pngsurf.png}
-                    &
-                    \includegraphics[width=0.95\linewidth]{images/viola/surf-64x64-4/m-012-2.pngsurf.png}
-                    \\
-                  \end{tabularx}
-                \end{column}
-              \end{columns}
-              \vskip-1ex
-            \end{block}
           }
         \end{minipage}
       \end{beamercolorbox}
@@ -130,145 +87,65 @@
             % ---------------------------------------------------------%
             % fill each column with content
 
-            \begin{block}{Geo Language Game}
+            \begin{block}{General Model}
               \begin{columns}
-                \begin{column}{.6\textwidth}
+                \begin{column}{.99\textwidth}
                   \begin{itemize}
-                  \item
-                    \begin{itemize}
-                    \item variations in illumination
-                    \item many different facial expressions
-                    \end{itemize}
-                  \item CMU-PIE
-                    \begin{itemize}
-                    \item variations in illumination (frontal images from the illumination subset)
-                    \end{itemize}
-                  \end{itemize}
-                \end{column}
-                \begin{column}{.39\textwidth}
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/arface/train/png/occlusions/arneutral/m-016-1}
-                  \-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/arface/train/png/cropped/m-016-4}
-                  \-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/arface/test/png/occlusions/ar1sun/m-016-8}
-                  \-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/arface/test/png/occlusions/ar1scarf/m-016-11}
-                  \vskip3ex
-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/cmupie/test/png/cropped/00-27-02}
-                  \-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/cmupie/test/png/cropped/00-27-17}
-                  \-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/cmupie/test/png/cropped/00-27-18}
-                  \-
-                  \includegraphics[width=0.22\linewidth]{hanselmann-databases/cmupie/test/png/cropped/00-27-20}
-                \end{column}
-              \end{columns}
-            \end{block}
-            \vfill
-            \begin{block}{Results: Manually Aligned Faces}
-              \begin{itemize}
-              \item AR-Face: 110 classes, 770 train, 770 test
-              \end{itemize}
-              \vskip-0.5ex
-              \begin{table}
-                \centering
-                \small
-                \begin{tabular}{@{} p{.2\linewidth} p{.18\linewidth} p{.25\linewidth} r r r @{}}
-                  \toprule
-                  Descriptor &  Extraction        & \multicolumn{1}{p{.2\linewidth}}{\# Features}           & \multicolumn{3}{c @{}}{Error Rates [\%]}         \\
-                  \cmidrule(l){4-6}
-                             &                    &                                                      & \multicolumn{1}{c}{Maximum} & \multicolumn{1}{c}{Grid} & \multicolumn{1}{c @{}}{Grid-Best} \\
-                  \cmidrule(r){1-1}  \cmidrule(lr){2-2}   \cmidrule(lr){3-3}                               \cmidrule(lr){4-4}            \cmidrule(lr){5-5}         \cmidrule(l){6-6}
-                  SURF-64    & IPs                & \pphantom{1}64 $\times$ 5.6 (avg.)                    & 80.64     &  84.15  & 84.15     \\
-                  SIFT       & IPs                & 128 $\times$ 633.78 (avg.)                           & 1.03      &  95.84  & 95.84      \\
-                  \addlinespace
-                  SURF-64    & 64x64-2 grid       & \pphantom{1}64 $\times$ 1024                          & 0.90      &  0.51   & 0.90      \\
-                  SURF-128   & 64x64-2 grid       & 128 $\times$ 1024                                    & 0.90      &  0.51   & 0.38       \\
-                  SIFT       & 64x64-2 grid       & 128 $\times$ 1024                                    & 11.03     &  0.90   & 0.64       \\
-                  \addlinespace
-                  U-SURF-64  & 64x64-2 grid       & \pphantom{1}64 $\times$ 1024                          & 0.90      &  1.03   & 0.64      \\
-                  U-SURF-128 & 64x64-2 grid       & 128 $\times$ 1024                                    & 1.55      &  1.29   & 1.03       \\
-                  U-SIFT     & 64x64-2 grid       & 128 $\times$ 1024                                    & \textbf{0.25}  &  \textbf{0.25}   & \textbf{0.25}  \\
-                  % \midrule
-                  % \multicolumn{3}{l}{Modular PCA \cite{TanChen:subpatternPCA:Neurocomputing2005}}                         & 14.14 \\
-                  % \multicolumn{3}{l}{Adaptively weighted Sub-Pattern PCA \cite{TanChen:subpatternPCA:Neurocomputing2005}} & 6.43  \\
-                  % \multicolumn{3}{l}{DCT \cite{ekenel:LocalapFaceRecog:cvprbw2006}}                                       & 4.70  \\
-                  \bottomrule
-                \end{tabular}
-              \end{table}
-
-              \vskip1ex
-              \begin{itemize}
-              \item CMU-PIE: 68 classes, 68 train (``one-shot'' training), 1360 test
-              \end{itemize}
-              \vskip-0.5ex
-              \begin{table}
-                \centering
-                \small
-                \begin{tabular}{@{} p{.2\linewidth} p{.18\linewidth} p{.25\linewidth} r r r @{}}
-                  \toprule
-                  Descriptor              &  Extraction    & \# Features                            & \multicolumn{3}{c @{}}{Error Rates [\%]}      \\
-                  \cmidrule(l){4-6}
-                                          &                    &                                    & \multicolumn{1}{c}{Maximum} & \multicolumn{1}{c}{Grid} & \multicolumn{1}{c @{}}{Grid-Best} \\
-                  \cmidrule(r){1-1}  \cmidrule(lr){2-2}   \cmidrule(lr){3-3}                          \cmidrule(lr){4-4}            \cmidrule(lr){5-5}         \cmidrule(l){6-6}
-                  SURF-64    & IPs           & \pphantom{1}64 $\times$ 6.80 (avg.)                  & 93.95         & 95.21             & 95.21     \\
-                  SIFT       & IPs           & 128 $\times$ 723.17 (avg.)                           & 43.47         & 99.33             & 99.33     \\
-                  \addlinespace
-                  SURF-64    & 64x64-2 grid  & \pphantom{1}64  $\times$ 1024                        &   13.41       &  4.12             &  7.82     \\
-                  SURF-128   & 64x64-2 grid  & 128 $\times$ 1024                                    &  12.45        &  3.68             & 3.24      \\
-                  SIFT       &  64x64-2 grid & 128 $\times$ 1024                                    & 27.92         &  7.00             & 9.80      \\
-                  \addlinespace
-                  U-SURF-64  & 64x64-2 grid  & \pphantom{1}64  $\times$ 1024                        & \textbf{3.83} &   \textbf{0.51}   & \textbf{0.66}    \\
-                  U-SURF-128 & 64x64-2 grid  & 128 $\times$ 1024                                    & 5.67          &  0.95             & 0.88      \\
-                  U-SIFT     & 64x64-2 grid  & 128 $\times$ 1024                                    & 16.28         &  1.40             & 6.41      \\
-                  % \midrule
-                  % \midrule
-                  % \multicolumn{3}{l}{Spherical Harmonics \cite{ZhangSamaras:SphericalHarmonics:pami2006}}                              & 1.80 \\
-                  % \multicolumn{3}{l}{Modeling Phase Spectra using GMM \cite{MitraSavvidesBrockwell:ModelingPhaseSpectra:lncs2005}}    & 12.83 \\
-                  \bottomrule
-                \end{tabular}
-              \end{table}
-            \end{block}
-            \vfill
-            \begin{block}{Results: Unaligned Faces}
-              \begin{columns}
-                \begin{column}{.59\textwidth}
-                  \begin{itemize}
-                  \item Automatically aligned by Viola \& Jones
-                  \end{itemize}
-                \end{column}
-                \begin{column}{.39\textwidth}
-                  \vskip-3ex
-                  \begin{itemize}
-                  \item Manually aligned faces
-
-                      \includegraphics[width=0.9\linewidth]{hanselmann-thesis/slides/figures/alignment_cmu}
-
-                  \item Unaligned faces
-
-                      \includegraphics[width=0.9\linewidth]{hanselmann-thesis/slides/figures/unalignment_cmu}
-
+                    \item Agents are:
+                      \begin{itemize}
+                        \item Motile: semi-random movement, constrained by preference for like terrain (limited movement up or down)
+                        \item Linguistic: agents have a constrained lexicon of 10 items
+                        \item Influential: agents can vary their lexicon under influence of neighbouring agents
+                        \item Transmissive: agents pass on lexicographic information to their offspring
+                      \end{itemize}
+                    \item Simulation includes:
+                      \begin{itemize}
+                        \item Sample terrain, including a valley and hillside
+                        \item Two notional language variants (agents' lexicons can feature items from both)
+                        \item Scalar parameters for:
+                          \begin{itemize}
+                            \item Initial language balance
+                            \item Rate of influence
+                            \item Rate of emigration
+                            \item Transmissive mode - both or a single parent
+                          \end{itemize}
+                      \end{itemize}
                   \end{itemize}
                 \end{column}
               \end{columns}
             \end{block}
             \vfill
-            \begin{block}{Conclusions}
-              \begin{itemize}
-              \item Grid-based local feature extraction instead of interest points
-              \item Local descriptors:
-                \begin{itemize}
-                \item upright descriptor versions achieved better results
-                \item SURF-128 better than SURF-64
-                \end{itemize}
-              \item System robustness: manually aligned/unaligned/partially occluded faces
-                \begin{itemize}
-                \item SURF more robust to illumination
-                \item SIFT more robust to changes in viewing conditions
-                \end{itemize}
-              \item RANSAC-based system combination and outlier removal
-              \end{itemize}
+            \begin{block}{Descriptive Results}
+              \begin{columns}
+                \begin{column}{.99\textwidth}
+                  \begin{itemize}
+                    \item With sufficiently low or high initial language imbalance, one language comes to dominate
+                    \item At language balance at close to 50\%, linguistic diversity is retained
+                    \item "Ethnocentrism"-type (Axelrod \& Hammond 2003) clustering patterns emerge, partially shaped by topography
+                    \item Suggests higher "cost" of moving to higher or lower rather than same elevation is a plausible deterrent to
+                      language change
+                      \begin{itemize}
+                        \item Irregular topography could help explain preservation of linguistic diversity, even in relatively dense geographies
+                      \end{itemize}
+                  \end{itemize}
+                \end{column}
+              \end{columns}
+            \end{block}
+            \vfill
+            \begin{block}{Further Refinements}
+              \begin{columns}
+                \begin{column}{.99\textwidth}
+                  \begin{itemize}
+                    \item Model extended with various further factors:
+                      \begin{itemize}
+                        \item Economic, cultural and other social exchanges
+                        \item Exogenous events - colonisation, technology
+                        \item Perceptions of language as a \"marker\" of culture
+                        \item Variation on intermarriage effects
+                      \end{itemize}
+                  \end{itemize}
+                \end{column}
+              \end{columns}
             \end{block}
           }
           % ---------------------------------------------------------%
@@ -293,8 +170,8 @@
             \begin{block}{\textit{WebGL}}
               \begin{columns}
                 \begin{column}{.99\textwidth}
-                  \includegraphics[width=0.88\linewidth]{images/fp1}
-                  \-
+                  % \includegraphics[width=0.88\linewidth]{images/fp1}
+                  % \-
                   \includegraphics[width=0.88\linewidth]{images/fp2}
                   \-
                   \includegraphics[width=0.88\linewidth]{images/fp3}
@@ -302,21 +179,31 @@
               \end{columns}
             \end{block}
             \vfill
-            \begin{block}{Conclusions}
-              \begin{itemize}
-              \item Grid-based local feature extraction instead of interest points
-              \item Local descriptors:
-                \begin{itemize}
-                \item upright descriptor versions achieved better results
-                \item SURF-128 better than SURF-64
-                \end{itemize}
-              \item System robustness: manually aligned/unaligned/partially occluded faces
-                \begin{itemize}
-                \item SURF more robust to illumination
-                \item SIFT more robust to changes in viewing conditions
-                \end{itemize}
-              \item RANSAC-based system combination and outlier removal
-              \end{itemize}
+            \begin{block}{\textit{NetLogo} vs \textit{WebGL}}
+              \begin{columns}
+                \begin{column}{.99\textwidth}
+                  \begin{itemize}
+                    \item \textit{NetLogo}
+                      \begin{itemize}
+                        \item Easier to program
+                        \item Mature framework for input parameters and output analysis
+                      \end{itemize}
+                    \item \textit{WebGL} easier to embed in HTML
+                      \begin{itemize}
+                        \item Easier to program
+                        \item 3D modelling, shaders help "see" agent effects
+                        \item Fast, scalable (GPU for rendering)
+                        \item New libraries (\textit{three.js}, \textit{underscore.js}, \textit{jStat}) simplify visualisation and analysis
+                      \end{itemize}
+                    \item Observations
+                      \begin{itemize}
+                        \item Feature-for-feature translation between Logo and JavaScript plausible
+                        \item Future: possible automation (similar to \textit{Unity 5} / \textit{UnrealEngine 4})
+                        \item \textit{WebGL}-enabled ABMs attractive for teaching (e.g. embedding in \textit{BlackBoard})
+                      \end{itemize}
+                  \end{itemize}
+                \end{column}
+              \end{columns}
             \end{block}
           }
           % ---------------------------------------------------------%
