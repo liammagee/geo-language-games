@@ -30,8 +30,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength{\columnheight}
-\setlength{\columnheight}{60cm}
+\setlength{\columnheight}{65cm}
 
+% \usepackage{graphicx}
+% \usepackage{epstopdf}
+% \DeclareGraphicsExtensions{.eps, .png}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -54,41 +57,15 @@
                 \item 0.1\% of the world's population
                 \item 13\% of the world's languages
                 \end{itemize}
-              \item Many factors have been proposed to account for diversity (e.g. Pawley 2007; Currie \& Mace 2009; Lupyan \& Dale 2010; Greenhill 2014) 
+              \item Many factors have been proposed to account for diversity (e.g. Pawley 2007; Currie \& Mace 2009; Lupyan \& Dale 2010; Greenhill 2014)
               \item It has been suggested terrain may play a role (e.g. Marck 1986, 2000), but this is rarely included in modern models
               \item Here we:
               \begin{itemize}
             \item argue that GIS \& ABMs offer useful ways to understand role of geography as well as other factors in language change
-              \item compare \textit{NetLogo} to custom WebGL 3D visualisations \end{itemize} 
+              \item compare \textit{NetLogo} to custom WebGL 3D visualisations \end{itemize}
               \end{itemize}
             \end{block}
             \vfill
-            \begin{block}{Default Model in \textit{NetLogo}}
-              \begin{figure}
-                \centering
-                \includegraphics[width=1.0\linewidth]{images/netlogo}
-              \end{figure}
-              \begin{itemize}
-                \item
-              \end{itemize}
-            \end{block}
-          }
-        \end{minipage}
-      \end{beamercolorbox}
-    \end{column}
-    % ---------------------------------------------------------%
-    % end the column
-
-    % ---------------------------------------------------------%
-    % Set up a column
-    \begin{column}{.33\textwidth}
-      \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
-        \begin{minipage}[T]{.95\textwidth} % tweaks the width, makes a new \textwidth
-          \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
-            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
-            % ---------------------------------------------------------%
-            % fill each column with content
-
             \begin{block}{General Model}
               \begin{columns}
                 \begin{column}{.99\textwidth}
@@ -112,6 +89,47 @@
                             \item Transmissive mode - both or a single parent
                           \end{itemize}
                       \end{itemize}
+                  \end{itemize}
+                \end{column}
+              \end{columns}
+            \end{block}
+            \vfill
+            \begin{block}{Model Running in \textit{NetLogo}}
+              \begin{figure}
+                \centering
+                \includegraphics[width=0.32\linewidth]{images/netlogo}
+                -
+                \includegraphics[width=0.32\linewidth]{images/networks}
+                -
+                \includegraphics[width=0.32\linewidth]{images/random_movement}
+              \end{figure}
+            \end{block}
+          }
+        \end{minipage}
+      \end{beamercolorbox}
+    \end{column}
+    % ---------------------------------------------------------%
+    % end the column
+
+    % ---------------------------------------------------------%
+    % Set up a column
+    \begin{column}{.33\textwidth}
+      \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+        \begin{minipage}[T]{.95\textwidth} % tweaks the width, makes a new \textwidth
+          \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
+            % ---------------------------------------------------------%
+            % fill each column with content
+
+            \begin{block}{Language Change}
+              \begin{columns}
+                \begin{column}{.99\textwidth}
+                  \begin{figure}
+                    \centering
+                    \includegraphics[width=0.80\linewidth]{images/language_change_model}
+                  \end{figure}
+                  \begin{itemize}
+                    \item ANY TEXT NEEDED HERE?
                   \end{itemize}
                 \end{column}
               \end{columns}
@@ -172,18 +190,6 @@
             % fill each column with content
 
             \vfill
-            \begin{block}{\textit{WebGL}}
-              \begin{columns}
-                \begin{column}{.99\textwidth}
-                  % \includegraphics[width=0.88\linewidth]{images/fp1}
-                  % \-
-                  \includegraphics[width=0.88\linewidth]{images/fp2}
-                  \-
-                  \includegraphics[width=0.88\linewidth]{images/fp3}
-                \end{column}
-              \end{columns}
-            \end{block}
-            \vfill
             \begin{block}{\textit{NetLogo} vs \textit{WebGL}}
               \begin{columns}
                 \begin{column}{.99\textwidth}
@@ -207,6 +213,18 @@
                         \item \textit{WebGL}-enabled ABMs attractive for teaching (e.g. embedding in \textit{BlackBoard})
                       \end{itemize}
                   \end{itemize}
+                \end{column}
+              \end{columns}
+            \end{block}
+            \vfill
+            \begin{block}{Model Running in \textit{WebGL}}
+              \begin{columns}
+                \begin{column}{.99\textwidth}
+                  % \includegraphics[width=0.88\linewidth]{images/fp1}
+                  % \-
+                  \includegraphics[width=0.88\linewidth]{images/fp2}
+                  \-
+                  \includegraphics[width=0.88\linewidth]{images/fp3}
                 \end{column}
               \end{columns}
             \end{block}
