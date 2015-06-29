@@ -69,11 +69,26 @@
             \begin{block}{Model Running in \textit{NetLogo}}
               \begin{figure}
                 \centering
-                \includegraphics[width=0.32\linewidth]{images/netlogo}
-                -
-                \includegraphics[width=0.32\linewidth]{images/networks}
-                -
-                \includegraphics[width=0.32\linewidth]{images/random_movement}
+                \begin{columns}[onlytextwidth]
+                \begin{column}{.32\textwidth}
+                \begin{figure}
+                \includegraphics[width=\linewidth]{images/networks}
+                \caption{No agent movement; interaction governed by social network}
+                \end{figure}
+           \end{column}         
+                 \begin{column}{.32\textwidth}               
+                 	\begin{figure}
+                \includegraphics[width=\linewidth]{images/random_movement}
+                \caption{Movement is random; interaction with nearby agents}
+            \end{figure}
+            \end{column}             
+                \begin{column}{.32\textwidth}
+                	\begin{figure}
+                 \includegraphics[width=\linewidth]{images/netlogo}
+                 \caption{Movement constrained by terrain; interaction with nearby agents}
+            \end{figure}
+            \end{column}
+            \end{columns}
               \end{figure}
             \end{block}
             \vfill
@@ -121,17 +136,14 @@
             % ---------------------------------------------------------%
             % fill each column with content
 
-            \begin{block}{Language Change}
+            \begin{block}{Language Change: A simple lexical replacement model}
               \begin{columns}
                 \begin{column}{.99\textwidth}
                   \begin{figure}
                     \centering
                     \includegraphics[width=0.80\linewidth]{images/language_change_model}
-                  \end{figure}
-                  \begin{itemize}
-                    \item ANY TEXT NEEDED HERE?
-                  \end{itemize}
-                \end{column}
+                  \end{figure}             
+              \end{column}
               \end{columns}
             \end{block}
             \begin{block}{Descriptive Results}
@@ -152,14 +164,14 @@
               \end{columns}
             \end{block}
             \vfill
-            \begin{block}{Placeholder for More Images}
+            \begin{block}{Terrain in New Guinea}
               \begin{figure}
                 \centering
-                \includegraphics[width=0.32\linewidth]{images/netlogo}
-                -
-                \includegraphics[width=0.32\linewidth]{images/networks}
-                -
-                \includegraphics[width=0.32\linewidth]{images/random_movement}
+                \includegraphics[width=\linewidth]{images/New_Guinea_Topography}
+           %     -
+            %   \includegraphics[width=0.32\linewidth]{images/networks}
+             %   -
+             %   \includegraphics[width=0.32\linewidth]{images/random_movement}
               \end{figure}
             \end{block}
           }
