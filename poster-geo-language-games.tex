@@ -31,6 +31,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength{\columnheight}
 \setlength{\columnheight}{65cm}
+\setbeamertemplate{caption}[numbered]
 
 % \usepackage{graphicx}
 % \usepackage{epstopdf}
@@ -70,19 +71,19 @@
                 \centering
                 \begin{columns}[T]
                   \begin{column}{.32\textwidth}
-                    \begin{figure}
+                    \begin{figure}[h!]
                     \includegraphics[width=\linewidth]{images/networks}
                     \caption{No agent movement; interaction governed by social network}
                     \end{figure}
                   \end{column}         
                   \begin{column}{.32\textwidth}               
-                   	\begin{figure}
+                   	\begin{figure}[h!]
                     \includegraphics[width=\linewidth]{images/random_movement}
                     \caption{Movement is random; interaction with nearby agents}
                     \end{figure}
                   \end{column}             
                   \begin{column}{.32\textwidth}
-                    \begin{figure}
+                    \begin{figure}[h!]
                       \includegraphics[width=\linewidth]{images/netlogo}
                       \caption{Terrain constraints on movement; interaction with nearby agents}
                     \end{figure}
@@ -134,10 +135,10 @@
             % ---------------------------------------------------------%
             % fill each column with content
 
-            \begin{block}{Language Change: A simple lexical replacement model}
+            \begin{block}{Language Change: A Simple Lexical Replacement Model}
               \begin{columns}
                 \begin{column}{.99\textwidth}
-                  \begin{figure}
+                  \begin{figure}[h!]
                     \centering
                     \includegraphics[width=0.80\linewidth]{images/language_change_model}
                   \end{figure}             
@@ -163,7 +164,7 @@
             \end{block}
             \vfill
             \begin{block}{Terrain in New Guinea}
-              \begin{figure}
+              \begin{figure}[h!]
                 \centering
                 \includegraphics[width=\linewidth]{images/New_Guinea_Topography}
            %     -
