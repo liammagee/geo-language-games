@@ -20,7 +20,8 @@ _book
 *.log
 *.nav
 *.out
-# *.pdf
+article/*.pdf
+poster/*.pdf
 *.snm
 *.toc
 

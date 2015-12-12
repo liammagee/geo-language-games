@@ -42,12 +42,21 @@ Both height and foliage act as cost-based constraints on the movement of members
 ## Conclusions
 
 
-Sample image
+### Sample images
 
 ![Sample image](../images/fp1.png)
 
-Sample Citation
 
-[@hendery2015palmerston].
+### Sample Citations
+
+ - [@hendery2015palmerston]
+ - [@hurford1989biological]
+ - [@kirby1998fitness]
+ - [@kirby2014iterated]
+ - [@livingstone1999modelling]
+ - [@nowak2002computational]
+ - [@parkvall2013simulating]
+ - [@tesar1998iterative]
+
 
 ## References
