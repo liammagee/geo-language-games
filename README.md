@@ -19,10 +19,11 @@ The poster PDF should then be available for viewing.
 
 To generate PDF, HTML or Word output:
 
-    cd article
-    pandoc article-geo-language-games.md -S -s --toc --bibliography=geo-language-games.bib --filter pandoc-citeproc --csl apa.csl -o article-geo-language-games.pdf  # PDF
-    pandoc article-geo-language-games.md -S -s --toc --bibliography=geo-language-games.bib --filter pandoc-citeproc --csl apa.csl -o article-geo-language-games.html  # HTML
-    pandoc article-geo-language-games.md -S -s --toc --bibliography=geo-language-games.bib --filter pandoc-citeproc --csl apa.csl -o article-geo-language-games.docx  # Word
+    pandoc article/article-geo-language-games.md -S -s --toc --bibliography=article/geo-language-games.bib --filter pandoc-citeproc --csl article/apa.csl -o article/article-geo-language-games.pdf  # PDF
+
+    pandoc article/article-geo-language-games.md -S -s --toc --bibliography=article/geo-language-games.bib --filter pandoc-citeproc --csl article/apa.csl -o article/article-geo-language-games.html  # HTML
+
+    pandoc article/article-geo-language-games.md -S -s --toc --bibliography=article/geo-language-games.bib --filter pandoc-citeproc --csl article/apa.csl -o article/article-geo-language-games.docx  # Word
 
 
 
