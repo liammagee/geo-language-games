@@ -43,7 +43,11 @@ We build upon existing work with a web-based ABM framework, Fierce Planet [@mage
 Both height and foliage act as cost-based constraints on the movement of members of different tribal groups. As a general rule, this constrains interactions between groups, while reinforcing bonding ties within groups. Our model shows that, given a common linguistic origin, over time geographical constraints acts as a factor in the gradual divergence of dialect and language between two groups. This is especially so when one or both groups are exposed to exogenous influences. We also model a range of alternative scenarios, where connections between groups become easier or more difficult due to alterative pathways between them. 
 
 
-### Model: Geological Language Games
+### Model: Geo Language Games
+
+We construct a general model containing an agent population randomly distributed over a landscape containing 
+
+
 
 * Language as Space
     - Patches representing linguistic territory
@@ -91,6 +95,10 @@ Both height and foliage act as cost-based constraints on the movement of members
 
 ## Conclusions
 
+
+### Sample maths
+
+$\sum\limits_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$
 
 ### Sample images
 
