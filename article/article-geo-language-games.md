@@ -29,19 +29,64 @@
 
 Agent-based models assume one or more computer-based autonomous, linguistic, reactive, proactive and intentional agents who interact with each other and their environment (Wooldridge and Jennings 1995; Gilbert and Troitzsch 2005). Given an initial set of states distributed across a group of agents, and a finite set of rules, these interactions can then show interesting emergent patterns over time (Axelrod 1997). As both Axelrod (1997) and Epstein (2008) argue, agent-based models can be useful as much for their explanatory as for their predictive value – as sorts of “thought experiments” (Axelrod 1997, p.4) for elucidating how complex phenomena might emerge from simple assumptions. Increasingly, ABMs have been applied to social phenomena such as economic systems (Farmer and Foley 2009), political cooperation and decision-making (Axelrod 1997), urban development (Batty 2007), social networks (Macy and Willer 2002) – and language change (Steels 1997). 
 
-However, agent-based modelling remains an underexplored – if tantalising – approach to understanding models of language change. As one example, Parkvall et al (2013) proposed an agent-based model for the evolution of creoles in which agents follow extremely simple rules about talking to each other and updating their lexicon to ‘learn’ new words from each other during interactions. They tested this model for various combinations of founder languages, and found that it successfully predicts the lexifier language in the resulting creole. 
+However, agent-based modelling remains an underexplored – if tantalising – approach to understanding models of language change. As one example, [-@parkvall2013simulating] proposed an agent-based model for the evolution of creoles in which agents follow extremely simple rules about talking to each other and updating their lexicon to ‘learn’ new words from each other during interactions. They tested this model for various combinations of founder languages, and found that it successfully predicts the lexifier language in the resulting creole. 
 
-The idea behind such a simulation is not to include all possible factors in language change, but to pare them down to the minimum needed to get a realistic outcome. This shows us which elements are most important in language change. Elements that have been considered in previous agent-based simulation of language change include social networks (Troutman et al 2008), genetic predisposition of the agents to language learning (Baronchelli et al 2012), and diversity of founding population (Parkvall et al 2013), but to our knowledge, no one has included geographical factors.
+The idea behind such a simulation is not to include all possible factors in language change, but to pare them down to the minimum needed to get a realistic outcome. This shows us which elements are most important in language change. Elements that have been considered in previous agent-based simulation of language change include social networks (Troutman et al 2008), genetic predisposition of the agents to language learning [@baronchelli2012biological], and diversity of founding population [@parkvall2013simulating], but to our knowledge, no one has included geographical factors.
 
 
-## Our model / our software
+## Methods
 <!--- I don't know how much detail we want to go into here. Just an outline of how it can work? Or an example of a model and what we gain from it? -->
 
 <!--- Again, have copy-pastaed relevant paras from our abstract -->
-We build upon existing work with a web-based ABM framework, Fierce Planet (Magee 2012; Magee 2014). The affordance of this framework over more established ABM frameworks such as NetLogo, Repast and CORMAS (e.g. Bajracharya and Duboz 2013) is the relative accessibility of simulations – these can be easily deployed and shared with other researchers and communities. We adapt that framework for three-dimensional rendering using WebGL and Three.js, and import geographical models for both locations. For Papua New Guinea, we import DEM models developed by USGS. For Palmerston Island we construct a DEM model using World Machine since it is too small and low-lying to be picked up satellite. 
+We build upon existing work with a web-based ABM framework, Fierce Planet [@magee2012simulating; @richardson2015fierce]. The affordance of this framework over more established ABM frameworks such as NetLogo, Repast and CORMAS (e.g. @bajracharya2013comparison) is the relative accessibility of simulations – these can be easily deployed and shared with other researchers and communities. We adapt that framework for three-dimensional rendering using WebGL and Three.js, and import geographical models for both locations. For Papua New Guinea, we import DEM models developed by USGS. For Palmerston Island we construct a DEM model using World Machine since it is too small and low-lying to be picked up satellite. 
 
 Both height and foliage act as cost-based constraints on the movement of members of different tribal groups. As a general rule, this constrains interactions between groups, while reinforcing bonding ties within groups. Our model shows that, given a common linguistic origin, over time geographical constraints acts as a factor in the gradual divergence of dialect and language between two groups. This is especially so when one or both groups are exposed to exogenous influences. We also model a range of alternative scenarios, where connections between groups become easier or more difficult due to alterative pathways between them. 
 
+
+### Model: Geological Language Games
+
+* Language as Space
+    - Patches representing linguistic territory
+    - Networks
+* Language Change as 
+    - Generational 
+    - Interactional
+    - Combination
+* Model:
+    - Agent language: graph outputs
+    - Geosocial affiliation: patch colour / agent colour
+    - Centre point of colour: homing coordinates
+    - Landscape has a language: strong or weak associations
+        + Formalism vs emergent grammar
+    - Networks as social ties
+    - Movement algorithms
+        + Random
+        + A* path finding
+        + Desire paths
+    - Interactions
+* Ontology of theories 
+    - metamodel and measurement of distance
+    - commensurability
+    - macro vs micro
+    - generational transmission
+    - frequency effects (mechanistic)
+    - creolisation
+        + language mixing: creolisation vs language hybridisation
+    - Principle of parsimony in modelling multiple theories
+        + Changing value of a parameter
+        + Different parameter
+        + Different functional treatment of parameters
+* Theoretical positions: 
+    - Emergent grammar
+    - Grammatalisation
+    - Agent vs passive (Van Coetsen)
+
+
+
+## Results
+
+
+## Discussion
 
 
 ## Conclusions
