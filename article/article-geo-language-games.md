@@ -16,10 +16,13 @@
 
 ## Introduction
 
+
+
 ## Language located in the landscape
 <!--- something about Aboriginal conceptions of language and space; linguistic models disconnected with landscape -->
 
 ## Agent-based modelling and language
+
 % brief survey of existing agent-based models of language. Highlight how they largely ignore geography
 
 <!--- have copied in the following couple of paragraphs from our DH abstract. They'll need some revision if we end up using them. I haven't formatted the references or added them to a bib file yet either. -->
@@ -38,6 +41,8 @@ The idea behind such a simulation is not to include all possible factors in lang
 We build upon existing work with a web-based ABM framework, Fierce Planet (Magee 2012; Magee 2014). The affordance of this framework over more established ABM frameworks such as NetLogo, Repast and CORMAS (e.g. Bajracharya and Duboz 2013) is the relative accessibility of simulations – these can be easily deployed and shared with other researchers and communities. We adapt that framework for three-dimensional rendering using WebGL and Three.js, and import geographical models for both locations. For Papua New Guinea, we import DEM models developed by USGS. For Palmerston Island we construct a DEM model using World Machine since it is too small and low-lying to be picked up satellite. 
 
 Both height and foliage act as cost-based constraints on the movement of members of different tribal groups. As a general rule, this constrains interactions between groups, while reinforcing bonding ties within groups. Our model shows that, given a common linguistic origin, over time geographical constraints acts as a factor in the gradual divergence of dialect and language between two groups. This is especially so when one or both groups are exposed to exogenous influences. We also model a range of alternative scenarios, where connections between groups become easier or more difficult due to alterative pathways between them. 
+
+
 
 ## Conclusions
 
